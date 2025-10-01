@@ -1,0 +1,142 @@
+/* GF Recipes – Front Submit UI (scoped) */
+:root {
+  --gf-bg: #f7f8fa;
+  --gf-card: #fff;
+  --gf-text: #1f2937;
+  --gf-muted: #6b7280;
+  --gf-border: #e5e7eb;
+  --gf-brand: #2c5f2d;
+  --gf-brand-700: #234d24;
+  --shadow: 0 6px 20px rgba(17, 24, 39, 0.06);
+  --radius: 14px;
+  --radius-sm: 10px;
+}
+.gf-submit-scope .gf-submit-wrapper {
+  background: var(--gf-card);
+  border: 1px solid var(--gf-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: clamp(16px, 2.5vw, 28px);
+  max-width: 860px;
+  margin: 0 auto;
+}
+.page-title {
+  font-size: clamp(24px, 3.2vw, 36px);
+  line-height: 1.2;
+  margin: 8px 0 var(--space);
+  letter-spacing: 0.2px;
+}
+
+.gf-submit-scope .gf-submit-title {
+  margin: 0 0 10px;
+  font-size: clamp(22px, 3vw, 30px);
+  color: var(--gf-text);
+}
+.gf-submit-scope .notice {
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  margin: 8px 0 14px;
+  border: 1px solid var(--gf-border);
+}
+.gf-submit-scope .notice.success {
+  background: #ecfdf5;
+  color: #065f46;
+  border-color: #bbf7d0;
+}
+.gf-submit-scope .notice.error {
+  background: #fef2f2;
+  color: #991b1b;
+  border-color: #fecaca;
+}
+
+.gf-submit-scope .gf-submit-form {
+  display: block;
+}
+.gf-submit-scope .gf-field {
+  margin: 12px 0;
+}
+.gf-submit-scope .two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+@media (max-width: 740px) {
+  .gf-submit-scope .two-col {
+    grid-template-columns: 1fr;
+  }
+}
+
+.gf-submit-scope label {
+  display: block;
+  font-weight: 600;
+  color: var(--gf-text);
+  margin-bottom: 6px;
+}
+.gf-submit-scope input[type="text"],
+.gf-submit-scope input[type="email"],
+.gf-submit-scope input[type="number"],
+.gf-submit-scope input[type="file"],
+.gf-submit-scope select,
+.gf-submit-scope textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--gf-border);
+  border-radius: var(--radius-sm);
+  font: inherit;
+  color: var(--gf-text);
+  background: #fff;
+  outline: none;
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+.gf-submit-scope textarea {
+  min-height: 120px;
+}
+.gf-submit-scope input:focus,
+.gf-submit-scope select:focus,
+.gf-submit-scope textarea:focus {
+  border-color: var(--gf-brand);
+  box-shadow: 0 0 0 4px rgba(44, 95, 45, 0.12);
+}
+
+.gf-submit-scope .gf-actions {
+  margin-top: 16px;
+}
+.gf-submit-scope .gf-submit-btn {
+  background: var(--gf-brand);
+  color: #fff;
+  border: 0;
+  border-radius: 12px;
+  padding: 12px 18px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.06);
+  transition:
+    background 0.15s ease,
+    transform 0.06s ease;
+}
+.gf-submit-scope .gf-submit-btn:hover {
+  background: var(--gf-brand-700);
+}
+.gf-submit-scope .gf-submit-btn:active {
+  transform: translateY(1px);
+}
+
+.gf-submit-scope .gf-note {
+  color: var(--gf-muted);
+  font-size: 0.95rem;
+  margin-top: 8px;
+}
+.gf-submit-scope .gf-honeypot {
+  position: absolute !important;
+  left: -9999px !important;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  .gf-submit-scope * {
+    transition: none !important;
+  }
+}
