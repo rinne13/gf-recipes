@@ -1,4 +1,3 @@
-# gf-recipes
 # GF Recipes
 
 A complete WordPress recipe management system with custom post types, metadata, search, and user submissions.  
